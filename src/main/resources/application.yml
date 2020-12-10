@@ -1,0 +1,23 @@
+spring:
+  application:
+  name: kafka-streams-branching-sample
+  cloud:
+    stream:
+      kafka:
+        bindings:
+          inputuserstream:
+            consumer:
+              startOffset: earliest
+              resetOffsets: true
+            destination: inputuserstream
+          outputuserstreamtea:
+            destination: outputuserstreamtea
+          outputuserstreamcoffee:
+            destination: outputuserstreamcoffee
+      function:
+        definition: process
+    streams:
+      applicationId: wave-splitter
+
+  servlet:
+    context-path: /wave-splitter

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wave.kafka</groupId>
-	<artifactId>streams</artifactId>
+	<artifactId>kafka-streams</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>streams</name>
