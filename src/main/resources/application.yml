@@ -1,23 +1,13 @@
-spring:
-  application:
-  name: kafka-streams-branching-sample
-  cloud:
-    stream:
-      kafka:
-        bindings:
-          inputuserstream:
-            consumer:
-              startOffset: earliest
-              resetOffsets: true
-            destination: inputuserstream
-          outputuserstreamtea:
-            destination: outputuserstreamtea
-          outputuserstreamcoffee:
-            destination: outputuserstreamcoffee
-      function:
-        definition: process
-    streams:
-      applicationId: wave-splitter
+spring.cloud.stream.kafka.streams.binder.configuration.commit.interval.ms: 1000
+spring.cloud.stream.kafka.streams.binder.configuration:
+  default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+  default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+spring.cloud.stream.bindings.process-out-0:
+  destination: outputuserstreamtea
+spring.cloud.stream.bindings.process-out-1:
+  destination: outputuserstreamcoffee
+spring.cloud.stream.bindings.process-in-0:
+  destination: inputStreamStringBuilder
+spring.application.name: kafka-streams-branching-sample11
 
-  servlet:
-    context-path: /wave-splitter
+spring.cloud.stream.kafka.streams.binder.serdeError: logAndContinue

@@ -33,7 +33,7 @@ import static com.wave.kafka.streams.splitter.UserProcessorBinding.*;
 import static org.springframework.kafka.annotation.KafkaStreamsDefaultConfiguration.DEFAULT_STREAMS_CONFIG_BEAN_NAME;
 
 
-@EnableBinding(UserProcessorBinding.class)
+
 public class UserDataSplitter {
 
     ObjectMapper mapper = new ObjectMapper();
