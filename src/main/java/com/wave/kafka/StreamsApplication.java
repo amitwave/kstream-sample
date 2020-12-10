@@ -1,4 +1,4 @@
-package com.wave.kafka.streams;
+package com.wave.kafka;
 
 import java.util.function.Function;
 
